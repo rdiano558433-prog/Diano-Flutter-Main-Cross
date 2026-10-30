@@ -27,44 +27,42 @@ class MainAxisSpace extends StatelessWidget {
             ),
 
             // Main content
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text(
-                      'MainAxisAlignment.spaceAround',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'MainAxisAlignment.spaceAround',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+
+                  const SizedBox(height: 12),
+
+                  Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.red,
                       ),
-                    ),
-
-                    const SizedBox(height: 12),
-
-                    Row(
-                      mainAxisAlignment:
-                          MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.blue,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.blue,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],

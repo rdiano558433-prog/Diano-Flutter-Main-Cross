@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MainAxisEnd extends StatelessWidget {
@@ -28,45 +27,43 @@ class MainAxisEnd extends StatelessWidget {
             ),
 
             // Main content
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text(
-                      'MainAxisAlignment.end',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'MainAxisAlignment.end',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+
+                  const SizedBox(height: 16),
+
+                  // Three colored squares aligned to the end
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.red,
                       ),
-                    ),
-
-                    const SizedBox(height: 16),
-
-                    // Three colored squares aligned to the end
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.blue,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.blue,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],

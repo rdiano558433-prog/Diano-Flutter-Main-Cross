@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class CrossAxisCenter extends StatelessWidget {
   const CrossAxisCenter({super.key});
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFF7FF),
@@ -28,46 +27,44 @@ class CrossAxisCenter extends StatelessWidget {
             ),
 
             // Main content
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'CrossAxisAlignment.center',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    'CrossAxisAlignment.center',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+
+                  const SizedBox(height: 16),
+
+                  // Vertically stacked colored squares
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.red,
                       ),
-                    ),
-
-                    const SizedBox(height: 16),
-
-                    // Vertically stacked colored squares
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.blue,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.yellow,
+                      ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        color: Colors.blue,
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],

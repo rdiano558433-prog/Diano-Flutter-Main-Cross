@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MainAxisStart extends StatelessWidget {
@@ -19,54 +18,37 @@ class MainAxisStart extends StatelessWidget {
               child: const Center(
                 child: Text(
                   'TASK 3 - Diano',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                  ),
+                  style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
               ),
             ),
 
             // Main content
-            Expanded(
-              child: Center(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text(
-                      'MainAxisAlignment.start',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                      ),
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
+                    'MainAxisAlignment.start',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
                     ),
+                  ),
 
-                    const SizedBox(height: 16),
+                  const SizedBox(height: 16),
 
-                    // Three colored squares aligned to the start
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.yellow,
-                        ),   
-                        Container(
-                          width: 70,
-                          height: 70,
-                          color: Colors.blue,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                  // Three colored squares aligned to the start
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(width: 70, height: 70, color: Colors.red),
+                      Container(width: 70, height: 70, color: Colors.yellow),
+                      Container(width: 70, height: 70, color: Colors.blue),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],
